@@ -1,0 +1,17 @@
+[package]
+name = "backlab"
+version = "0.1.0"
+edition = "2021"
+description = "Cross-sectional equity backtester with built-in tests against luck"
+license = "MIT"
+
+[lib]
+name = "backlab"
+path = "src/lib.rs"
+
+[[bin]]
+name = "backlab"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
