@@ -1,0 +1,20 @@
+# Portfolio construction shared by all experiments.
+fraction: 0.2          # share of the universe in each leg
+mode: long_short
+cost_bps: 10           # per unit of traded value
+seed: 1
+
+# The search: every combination below is one variant.
+grid:
+  momentum: [20, 60, 120, 250]     # lookbacks in days
+  skips: [0, 20]                   # most recent days left out of momentum
+  reversal: [1, 2, 5, 10, 20]
+  lowvol: [20, 60, 120, 250]
+  rebalances: [5, 20]
+
+draws: 500             # random strategies per null distribution
+bootstrap: 2000
+block: 20              # mean block length of the bootstrap, days
+costs_bps: [0, 2, 5, 10, 20, 30]
+
+walk_forward: {train: 378, step: 63}
